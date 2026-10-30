@@ -56,7 +56,13 @@ Each fan device (manufacturer Crompton, model CFENHP35W48IVYRM) has:
 | Button **On** | Sends the ON key |
 | Button **Off** | Sends the OFF key |
 | Buttons **Speed 1** to **Speed 5** | Send the speed keys |
-| Button **Hyper** | Sends the HYP key (assumed to be a hyper/boost mode) |
+| Button **Sleep** | Sends the SLEEP key (the fan lowers its speed over time) |
+| Button **Hyper** | Sends the HYP key (hyper mode) |
+| Buttons **Timer 1 hour** to **Timer 4 hours** | Send the 1H to 4H off-timer keys |
+
+Every key on the remote is covered. Sleep and the timers don't change the fan entity's
+state: when a timer turns the fan off, Home Assistant can't see it, so the fan entity
+still shows on.
 
 Fan behavior:
 
@@ -72,22 +78,12 @@ Assistant sent, including button presses, and restores that state after a restar
 cannot see presses on the physical remote, so the state can drift if you also use the
 remote. The entities are unavailable while the transmitter entity is unavailable.
 
-## Coming soon: keys that need codes
+## How to add codes for another key or remote
 
-The physical remote also has these keys. Their codes have not been captured yet, so they
-are not created as entities:
-
-| Key | Purpose |
-|---|---|
-| R/F | Reverse / forward |
-| SLEEP | Sleep mode (lowers speed over time) |
-| 1H, 2H, 3H, 4H | Off timers |
-
-Their codes cannot be derived from the other keys (see
-[docs/protocol.md, section 4](docs/protocol.md#4-address--command-split)). If you capture
-them, please open an issue or pull request with the Broadlink code.
-
-## How to add missing codes
+Key codes cannot be derived from each other (see
+[docs/protocol.md, section 4](docs/protocol.md#4-address--command-split)), so each one has
+to be learned. If you capture codes for another Crompton remote, please open an issue or
+pull request with the Broadlink codes.
 
 ### 1. Learn the key with Broadlink
 
@@ -120,12 +116,12 @@ captured key. All known codes for CFENHP35W48IVYRM start with `0x9145`.
 In `custom_components/crompton_bldc_rf/codes.py`, add the key to `MODEL_CFENHP35W48IVYRM`:
 
 ```python
-        CromptonKey.SLEEP: 0x9145XXXX,
+        CromptonKey.NEW_KEY: 0x9145XXXX,
 ```
 
-Restart Home Assistant. The matching button (with its name and icon) appears
-automatically. The key names already exist: `reverse_forward`, `sleep`, `timer_1h`,
-`timer_2h`, `timer_3h`, `timer_4h`.
+A new key also needs an entry in `CromptonKey` and `BUTTON_KEYS` in `codes.py`, a name in
+`strings.json` and `translations/en.json`, and an icon in `icons.json`. Restart Home
+Assistant and the button appears.
 
 ### Adding another fan model
 

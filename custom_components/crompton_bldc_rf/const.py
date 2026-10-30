@@ -100,5 +100,50 @@ BROADLINK_LEARNED_CODES: Final[dict[str, dict[str, str]]] = {
             "ChkaCAkZChkJGRoJCRkaCAkaCRkJGRoJCRkaCAkaCRkJGQkaGggaCQgaCRoIGgkZGgkZCRoI"
             "GgkIGgkZCQAF3A=="
         ),
+        "Sleep": (
+            "scBYAXSeBgA7CAoYChkaCAkZChkJGRoJCRkaCQkZCRkJGRoJCRkaCQgaCRkJGQkaGggJGQka"
+            "CRoIGhoIGgkIGhkJGgkIGhkJCQABGRoICRoJGRoIChkJGQkZGgkJGRoJCBoJGQkZGgkJGRoJ"
+            "CBoJGQkZChkaCAkaCRkJGgkZGggaCQkZGggaCQgaGggJAAEZGggJGgkZGggJGgkZCRkbCAkZ"
+            "GgkJGQkZCRoaCAkZGgkJGQkZCRoJGRoICRoJGQkaCRkaCBoJCRkaCBoJCRkaCAkAARkaCAoZ"
+            "CRkaCggZCRkJGRoJCRkaCQkZCRkJGRoJCRkaCQgaCRkJGgkZGggJGgkZCRoJGRoIGgkJGRoI"
+            "GgkIGhoICQABGRoICRoJGRoICRoJGQkZGwgJGRoJCRkJGQkZGgkJGRoJCBoJGQkZCRoaCAkZ"
+            "ChkJGQoZGggaCAkaGggaCQgaGggJAAXc"
+        ),
+        "1H": (
+            "scBYAbqeBgA6CAoYChgbCAoZCRkJGRoJCRkaCAkaCRkJGRoJCRkaCAkaCBoJGQkZGgkaCQga"
+            "GgkJGQkaGQkJGRoIGgkIGgkZCQABGRoIChkJGRoIChkJGQkZGgkJGRoJCRkJGQkaGggJGRoJ"
+            "CRkJGQkaCRkaCBoJCRkaCQkZCRoZCQkZGgkZCQkZCRoJAAEYGgkJGQkZGgkJGQkZCRoaCAka"
+            "GQkJGQkZChkaCAkZGgkJGQkZCRoJGRoJGQkJGRoKCBoJGRoICRoZCRoICRoIGgkAARkZCQkZ"
+            "CRkaCQkZCRkJGhoICRoaCAkZCRkJGhoICRkaCQkZCRoIGgkZGgkZCQkZGgkJGgkZGggJGRoJ"
+            "GggJGQkaCQABGBoJCRkJGRoJCRkJGQkaGggJGhoICRkJGgkZGggJGRoJCRkJGQkaCRkaCRoI"
+            "CRkaCQkaCBoaCAkaGQkaCAkaCBoJAAXc"
+        ),
+        "2H": (
+            "scBYAc6eBgA6CAkZChkaCAkZChkJGRoJCRkaCAkaCRkJGRoJCBoaCAkaCBoJGQkZCRoJGQkZ"
+            "GgkJGRoJGQkaCQgaGQkJGhkJCAABGRsICRkJGRoJCRkJGQkaGggJGhoICRkJGQoZGggJGRoJ"
+            "CRkJGQoZCRkJGQkaCRkaCQkZGggaCRkJCRkaCQkZGgkIAAEZGggJGQkaGggJGQoZCRkaCQkZ"
+            "GggJGgkZCRkaCQkZGggJGgkZCRkJGggaCRkJGRoJCRoZCRoIGgkIGhoICRoZCQkAARgaCQkZ"
+            "CRkbCAkZCRkJGhoICRkaCQkZCRoJGRoICRkaCQkZCRkKGQkZCRkKGQkZGgkJGRoJGQkaCAka"
+            "GQkJGRoJCAABGRoICRoJGRoICRoJGQkZGgkJGRoJCRkJGQkZGgkJGRoJCBoJGQkZCRoJGQkZ"
+            "CRoaCAkaGggaCBoJCRkaCQgaGQkJAAXc"
+        ),
+        "3H": (
+            "sMBYAWibBgA5CAoZCRkaCQkZCRkJGRsICRkaCQkZCRkJGRoJCRkaCQkZCRkJGQoZGggJGQoZ"
+            "GgkJGRoICRoaCBoIGgkZCRoICQABGRoICRkJGhoIChkJGQkZGgkJGRoIChkJGQkZGggKGRoI"
+            "CRoJGQkZCRkaCQkZCRkbCAoYHgUJGRoJGggaCBoJGQkJAAEYGgkJGQkZGgkJGQkZChkaCAkZ"
+            "GwgJGQkZChkaCAkZGwgJGQkZChkJGRoJCRkJGRoJCRkaCQkZGggaCRkJGggaCQgAARkaCAkZ"
+            "ChkaCAkaCRkJGRsICRkbCAkZCRkJGhoICRkaCAoZCRkJGQkaGggJGQoZGgkJGRoICRkaCRoI"
+            "GgkaCBoICQABGRoICRkKGRoICRkKGQkZGgkJGRoICRkKGQkZGggKGRoICRkKGQkZCRkbCAkZ"
+            "CRkbCAoZGggJGRoJGggaCBoJGQkJAAXc"
+        ),
+        "4H": (
+            "scBYAc6eBgA7BwoZCRkaCAoZCRkJGRsICRkaCQkZCRkJGhkJCRkaCQkZCRkJGggaCRkaCRkJ"
+            "GgkJGQkaCBoaCAkZGgkJGRoICQABGRoIChkJGRoJCRkJGQkZGwgJGRoJCRkJGQkaGggJGRoJ"
+            "CRkJGQkaCBoJGRoJGggaCQkaCBoJGRoICRoZCQkZGgkIAAEZGggJGgkZGggKGQkZCRkaCQkZ"
+            "GgkJGQkZCRkaCQkZGgkJGQkZCRoJGQkZGgkaCBoJCRkJGgkZGggJGRoJCRkaCAkAARkaCAoY"
+            "ChkaCQkZCRkJGRoJCRkaCQkZCRkJGRoJCRkaCQgaCRkJGQkaCRkaCBoJGgkJGQkaCRkaCAka"
+            "GQkJGRoJCAABGRoICRoJGRoICRoJGQkZGgkJGRoIChkJGQkZGgkJGRoJCBoJGQkZChkJGRoJ"
+            "GQkaCQkZCRoIGhoICRkaCQkZGggJAAXc"
+        ),
     },
 }

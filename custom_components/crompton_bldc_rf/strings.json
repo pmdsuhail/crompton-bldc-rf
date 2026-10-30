@@ -51,9 +51,6 @@
       "hyper": {
         "name": "Hyper"
       },
-      "reverse_forward": {
-        "name": "Reverse/forward"
-      },
       "sleep": {
         "name": "Sleep"
       },

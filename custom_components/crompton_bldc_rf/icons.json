@@ -25,9 +25,6 @@
       "hyper": {
         "default": "mdi:fan-chevron-up"
       },
-      "reverse_forward": {
-        "default": "mdi:rotate-3d-variant"
-      },
       "sleep": {
         "default": "mdi:sleep"
       },

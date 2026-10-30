@@ -25,7 +25,6 @@ class CromptonKey(StrEnum):
     SPEED_4 = "speed_4"
     SPEED_5 = "speed_5"
     HYPER = "hyper"
-    REVERSE_FORWARD = "reverse_forward"
     SLEEP = "sleep"
     TIMER_1H = "timer_1h"
     TIMER_2H = "timer_2h"
@@ -46,9 +45,8 @@ BUTTON_KEYS: Final[tuple[CromptonKey, ...]] = (
     CromptonKey.ON,
     CromptonKey.OFF,
     *SPEED_KEYS,
-    CromptonKey.HYPER,
-    CromptonKey.REVERSE_FORWARD,
     CromptonKey.SLEEP,
+    CromptonKey.HYPER,
     CromptonKey.TIMER_1H,
     CromptonKey.TIMER_2H,
     CromptonKey.TIMER_3H,
@@ -77,13 +75,11 @@ MODEL_CFENHP35W48IVYRM: Final = RemoteModel(
         CromptonKey.SPEED_4: 0x91450311,
         CromptonKey.SPEED_5: 0x91450267,
         CromptonKey.HYPER: 0x91450C3C,
-        # Not captured yet: learn with Broadlink, decode with decode_check.py, add here.
-        # CromptonKey.REVERSE_FORWARD: 0x9145....,
-        # CromptonKey.SLEEP: 0x9145....,
-        # CromptonKey.TIMER_1H: 0x9145....,
-        # CromptonKey.TIMER_2H: 0x9145....,
-        # CromptonKey.TIMER_3H: 0x9145....,
-        # CromptonKey.TIMER_4H: 0x9145....,
+        CromptonKey.SLEEP: 0x9145086D,
+        CromptonKey.TIMER_1H: 0x91450D2C,
+        CromptonKey.TIMER_2H: 0x91450175,
+        CromptonKey.TIMER_3H: 0x9145095F,
+        CromptonKey.TIMER_4H: 0x91450715,
     },
 )
 
@@ -103,4 +99,9 @@ LEARNED_NAME_TO_KEY: Final[dict[str, CromptonKey]] = {
     "Speed4": CromptonKey.SPEED_4,
     "Speed5": CromptonKey.SPEED_5,
     "HYP": CromptonKey.HYPER,
+    "Sleep": CromptonKey.SLEEP,
+    "1H": CromptonKey.TIMER_1H,
+    "2H": CromptonKey.TIMER_2H,
+    "3H": CromptonKey.TIMER_3H,
+    "4H": CromptonKey.TIMER_4H,
 }

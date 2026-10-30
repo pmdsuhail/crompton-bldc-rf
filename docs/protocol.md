@@ -97,9 +97,20 @@ Capture artifacts, which the regenerated frames drop:
   - no 8-bit sum or XOR of the first three bytes, and no sum, difference or XOR with byte 2,
     matches.
 - Conclusion: treat `0x9145` as the remote/fan address and the low 16 bits as an opaque
-  per-key command. Codes for keys that were not captured (R/F, SLEEP, 1H, 2H, 3H, 4H)
-  **cannot be derived** and are not invented. They must be learned and added to the code
-  table.
+  per-key command. Codes for other keys **cannot be derived** and must be learned.
+- The remaining keys were learned later and confirm the pattern (5 clean, identical frames
+  each, same `0x9145` prefix and `0` nibble at bits 15..12):
+
+| Key | Code |
+|---|---|
+| SLEEP | `0x9145086D` |
+| 1H | `0x91450D2C` |
+| 2H | `0x91450175` |
+| 3H | `0x9145095F` |
+| 4H | `0x91450715` |
+
+  The user's remote has no R/F key, so all keys of the CFENHP35W48IVYRM remote are now
+  in the code table.
 
 The user reports that these codes work for any fan of this model. That is plausible
 (the remote has no pairing procedure that the user mentioned), but it is not verified.
@@ -152,7 +163,7 @@ updating HA is the first thing to try.
 |---|---|---|
 | Frame structure, bit encoding, 32-bit values per key | High | 39 frames decode identically within each capture; tight timing statistics |
 | Generated timings match the learned ones | High | `decode_check.py` asserts every generated duration is within 15% of the per-position median of the learned frames |
-| The fan accepts the regenerated frames | Medium-high | Timings and structure match the captures. Not yet tested on hardware |
+| The fan accepts the regenerated frames | High | Confirmed by the user on hardware for ON, OFF, speeds 1..5 and HYP |
 | `0x9145` is shared by all CFENHP35W48IVYRM remotes | Medium | User statement only |
-| Meaning of HYP | Medium | Not printed on the remote photo. The name suggests a hyper/boost mode |
-| Codes for R/F, SLEEP, 1H..4H | None | Not captured and not derivable (section 4) |
+| Meaning of HYP | High | Printed on the user's remote. The user confirmed it is hyper mode |
+| Codes for SLEEP, 1H..4H | High | Learned and decoded (section 4). Not yet tested on hardware |
