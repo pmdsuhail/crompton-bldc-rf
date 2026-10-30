@@ -8,6 +8,11 @@ fan entity and one button per remote key. You don't need to learn or paste codes
 Supported model: **CFENHP35W48IVYRM**. The codes are expected to work for every fan of
 this model (not verified on more than one fan).
 
+Your remote should look like this: ON and OFF at the top, a speed ring 1 to 5, Sleep and
+HYP, and 1H to 4H timer keys. Every key is supported.
+
+<img src="https://raw.githubusercontent.com/pmdsuhail/crompton-bldc-rf/main/docs/remote.svg" alt="Crompton CFENHP35W48IVYRM remote layout: ON, OFF, speeds 1-5, Sleep, HYP, 1H-4H timers" width="160">
+
 This project is not affiliated with Crompton Greaves Consumer Electricals Limited.
 
 ## Requirements

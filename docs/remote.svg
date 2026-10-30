@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="520" viewBox="0 0 220 520" font-family="Arial, Helvetica, sans-serif">
+  <title>Crompton CFENHP35W48IVYRM RF remote layout</title>
+  <!-- Body -->
+  <path d="M40 30 Q110 10 180 30 Q196 34 196 52 L184 470 Q182 500 150 504 L70 504 Q38 500 36 470 L24 52 Q24 34 40 30 Z" fill="#1f1f1f" stroke="#000" stroke-width="2"/>
+  <!-- LED -->
+  <circle cx="110" cy="52" r="3" fill="#555"/>
+
+  <!-- ON / OFF -->
+  <g font-size="12" font-weight="bold" fill="#333" text-anchor="middle">
+    <circle cx="58" cy="60" r="17" fill="#cfcfcf"/><text x="58" y="64">ON</text>
+    <circle cx="162" cy="60" r="17" fill="#cfcfcf"/><text x="162" y="64">OFF</text>
+  </g>
+
+  <!-- Speed ring -->
+  <circle cx="110" cy="150" r="66" fill="#9a9a9a" stroke="#cfcfcf" stroke-width="3"/>
+  <circle cx="110" cy="150" r="30" fill="#bdbdbd" stroke="#8a8a8a" stroke-width="2"/>
+  <g font-size="16" font-weight="bold" fill="#222" text-anchor="middle">
+    <text x="110" y="156">5</text>
+    <text x="64" y="156">1</text>
+    <text x="110" y="106">2</text>
+    <text x="156" y="156">3</text>
+    <text x="110" y="208">4</text>
+  </g>
+
+  <!-- Sleep / HYP -->
+  <g font-size="11" font-weight="bold" fill="#333" text-anchor="middle">
+    <circle cx="46" cy="250" r="19" fill="#cfcfcf"/><text x="46" y="254">Sleep</text>
+    <circle cx="174" cy="250" r="19" fill="#cfcfcf"/><text x="174" y="254">HYP</text>
+  </g>
+
+  <!-- Timers -->
+  <rect x="86" y="232" width="48" height="190" rx="24" fill="#2c2c2c" stroke="#444"/>
+  <g font-size="15" font-weight="bold" fill="#222" text-anchor="middle">
+    <rect x="92" y="240" width="36" height="36" rx="8" fill="#bdbdbd"/><text x="110" y="263">1H</text>
+    <rect x="92" y="284" width="36" height="36" rx="8" fill="#bdbdbd"/><text x="110" y="307">2H</text>
+    <rect x="92" y="328" width="36" height="36" rx="8" fill="#bdbdbd"/><text x="110" y="351">3H</text>
+    <rect x="92" y="372" width="36" height="36" rx="8" fill="#bdbdbd"/><text x="110" y="395">4H</text>
+  </g>
+</svg>
