@@ -1,0 +1,59 @@
+{
+  "entity": {
+    "button": {
+      "on": {
+        "default": "mdi:power"
+      },
+      "off": {
+        "default": "mdi:power-off"
+      },
+      "speed_1": {
+        "default": "mdi:numeric-1-circle-outline"
+      },
+      "speed_2": {
+        "default": "mdi:numeric-2-circle-outline"
+      },
+      "speed_3": {
+        "default": "mdi:numeric-3-circle-outline"
+      },
+      "speed_4": {
+        "default": "mdi:numeric-4-circle-outline"
+      },
+      "speed_5": {
+        "default": "mdi:numeric-5-circle-outline"
+      },
+      "hyper": {
+        "default": "mdi:fan-chevron-up"
+      },
+      "reverse_forward": {
+        "default": "mdi:rotate-3d-variant"
+      },
+      "sleep": {
+        "default": "mdi:sleep"
+      },
+      "timer_1h": {
+        "default": "mdi:timer-outline"
+      },
+      "timer_2h": {
+        "default": "mdi:timer-outline"
+      },
+      "timer_3h": {
+        "default": "mdi:timer-outline"
+      },
+      "timer_4h": {
+        "default": "mdi:timer-outline"
+      }
+    },
+    "fan": {
+      "fan": {
+        "state_attributes": {
+          "preset_mode": {
+            "state": {
+              "hyper": "mdi:fan-chevron-up"
+            }
+          }
+        }
+      }
+    }
+  }
+}

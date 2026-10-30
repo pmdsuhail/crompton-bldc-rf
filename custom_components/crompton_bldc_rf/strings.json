@@ -1,0 +1,103 @@
+{
+  "config": {
+    "abort": {
+      "already_configured": "This fan is already configured with this transmitter and name.",
+      "no_compatible_transmitters": "No radio frequency transmitter supports {frequency} with {modulation} modulation.",
+      "no_transmitters": "No radio frequency transmitter found. Set up a Broadlink RM4 Pro (or another device that provides a radio frequency transmitter entity) first."
+    },
+    "error": {
+      "transmitter_not_found": "The selected transmitter was not found."
+    },
+    "step": {
+      "user": {
+        "title": "Add a Crompton BLDC fan",
+        "description": "Pick a name for the fan and the 433.92 MHz radio frequency transmitter that will send the remote's codes.",
+        "data": {
+          "name": "Name",
+          "transmitter": "Radio frequency transmitter",
+          "model": "Fan model"
+        },
+        "data_description": {
+          "name": "Name of the fan device in Home Assistant. Use a different name for each fan on the same transmitter.",
+          "transmitter": "The radio frequency transmitter entity (for example a Broadlink RM4 Pro) within range of the fan.",
+          "model": "The model of the fan whose remote codes will be sent."
+        }
+      }
+    }
+  },
+  "entity": {
+    "button": {
+      "on": {
+        "name": "On"
+      },
+      "off": {
+        "name": "Off"
+      },
+      "speed_1": {
+        "name": "Speed 1"
+      },
+      "speed_2": {
+        "name": "Speed 2"
+      },
+      "speed_3": {
+        "name": "Speed 3"
+      },
+      "speed_4": {
+        "name": "Speed 4"
+      },
+      "speed_5": {
+        "name": "Speed 5"
+      },
+      "hyper": {
+        "name": "Hyper"
+      },
+      "reverse_forward": {
+        "name": "Reverse/forward"
+      },
+      "sleep": {
+        "name": "Sleep"
+      },
+      "timer_1h": {
+        "name": "Timer 1 hour"
+      },
+      "timer_2h": {
+        "name": "Timer 2 hours"
+      },
+      "timer_3h": {
+        "name": "Timer 3 hours"
+      },
+      "timer_4h": {
+        "name": "Timer 4 hours"
+      }
+    },
+    "fan": {
+      "fan": {
+        "state_attributes": {
+          "preset_mode": {
+            "state": {
+              "hyper": "Hyper"
+            }
+          }
+        }
+      }
+    }
+  },
+  "exceptions": {
+    "key_not_supported": {
+      "message": "Model {model} has no RF code for the {key} key yet."
+    },
+    "transmitter_not_found": {
+      "message": "Radio frequency transmitter {entity_id} was not found."
+    },
+    "unknown_model": {
+      "message": "Unknown fan model {model}."
+    }
+  },
+  "selector": {
+    "model": {
+      "options": {
+        "cfenhp35w48ivyrm": "Crompton CFENHP35W48IVYRM"
+      }
+    }
+  }
+}

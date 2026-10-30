@@ -1,0 +1,5 @@
+# Import sorting as in Home Assistant core.
+[lint.isort]
+combine-as-imports = true
+force-sort-within-sections = true
+known-first-party = ["homeassistant"]
