@@ -1,13 +1,13 @@
 {
   "domain": "crompton_bldc_rf",
   "name": "Crompton BLDC RF Remote",
-  "codeowners": ["@your-github-username"],
+  "codeowners": ["@pmdsuhail"],
   "config_flow": true,
   "dependencies": ["radio_frequency"],
-  "documentation": "https://github.com/your-github-username/crompton-bldc-rf",
+  "documentation": "https://github.com/pmdsuhail/crompton-bldc-rf",
   "integration_type": "device",
   "iot_class": "assumed_state",
-  "issue_tracker": "https://github.com/your-github-username/crompton-bldc-rf/issues",
+  "issue_tracker": "https://github.com/pmdsuhail/crompton-bldc-rf/issues",
   "requirements": [],
   "version": "0.1.0"
 }

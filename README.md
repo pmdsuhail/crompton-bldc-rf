@@ -25,7 +25,7 @@ This project is not affiliated with Crompton Greaves Consumer Electricals Limite
 ### HACS (custom repository)
 
 1. In HACS, open the three-dot menu and choose **Custom repositories**.
-2. Add `https://github.com/your-github-username/crompton-bldc-rf` with category
+2. Add `https://github.com/pmdsuhail/crompton-bldc-rf` with category
    **Integration**.
 3. Search for **Crompton BLDC RF Remote**, download it, and restart Home Assistant.
 
@@ -149,11 +149,6 @@ model, the setup dialog shows a model dropdown.
 
 The RF protocol and how the codes were decoded are documented in
 [docs/protocol.md](docs/protocol.md).
-
-## Before publishing
-
-Replace the `your-github-username` placeholders in `manifest.json` (`codeowners`,
-`documentation`, `issue_tracker`) and in this README.
 
 ## License
 
